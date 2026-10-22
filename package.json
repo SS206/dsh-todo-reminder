@@ -1,0 +1,46 @@
+{
+  "name": "@local/todo-reminder",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DSH host plugin: gentle todo_write reminders when the visible task list goes stale",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "todo",
+    "reminder"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/plugin.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SS206/dsh-todo-reminder.git"
+  },
+  "homepage": "https://github.com/SS206/dsh-todo-reminder#readme",
+  "bugs": {
+    "url": "https://github.com/SS206/dsh-todo-reminder/issues"
+  },
+  "license": "MIT"
+}

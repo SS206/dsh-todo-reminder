@@ -1,0 +1,6 @@
+# dsh-todo-reminder bundle: mount the host half.
+# It registers no tools and ships no client code; the plugin only observes
+# session events and appends a notice-shaped reminder at pre-step.
+- insert:
+    - id: todo-reminder
+      name: '@local/todo-reminder'
